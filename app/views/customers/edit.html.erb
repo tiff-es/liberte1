@@ -1,5 +1,9 @@
-<h1>Update Your Account,<%= @customer.full_name %></h1>
-<%= render 'customers/form' %>
+<h2>Update your account below: </h2>
+<%= render 'customers/form' %><br><br><br><br><br><br>
 <%= form_for @customer do |f|  %>
-<%= button_to 'Delete Your Account', @customer, method: :delete%>
-<%end %>
+<%= button_to 'Delete Your Account?', @customer, method: :delete%>
+<%end %><br><br>
+
+
+
+<button><%= link_to 'Shop All', items_path %></button> <button><%= link_to 'Product Categories', categories_path %></button>

@@ -1,11 +1,12 @@
 <h1>Hi, <%= @customer.first_name.capitalize %>! Here are your account details: </h1>
 
 <!--    IF  PURCHASE COUNTER  ELSE LINK TO INDEX(STORE):  ""-->
-<h2> <% if @customer.purchase_list%>
-  <%= "You've purchased #{@customer.purchase_list.length} items" %>
+<% if @customer.purchase_list %>
+  <% "You've purchased #{@customer.purchase_list.length} items" %>
+<% else%>
 <!--Shows users purchased item  count (can be  changed to be iterated thru for an index of items)-->
-  <% else link_to 'Check out our store!', #items_path%>
-  <% end %> </h2>
+  <button>  <h3><%=link_to 'Shop All!', items_path%></button></h2>
+  <% end %>
 <!--     If the user hasn't bought any items, link to items_path or a store page-->
 <!--Shows users purchased item  count (can be  changed to be iterated thru for an index of items)-->
 
@@ -13,4 +14,4 @@
 <h2>Address: <%= @customer.address %></h2>
 <h2>Birthday: <%= @customer.birthday %> </h2>
 
-<h4> <%= link_to 'Edit Your Account', edit_customer_path(@customer) %> </h4>
+<h4> <button><%= link_to 'Edit Your Account', edit_customer_path(@customer) %> </h4> </button>

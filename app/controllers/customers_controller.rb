@@ -37,7 +37,7 @@ class CustomersController < ApplicationController
 
   def destroy
     Customer.destroy(params[:id])
-    redirect_to customers_path
+    redirect_to customers_pathi
   end
 
   private
