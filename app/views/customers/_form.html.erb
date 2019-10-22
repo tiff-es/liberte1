@@ -1,0 +1,24 @@
+<% if @customer.errors.any? %>
+  <div id="error_explanation">
+    <h4>
+      <%= pluralize(@customer.errors.count, "error") %>
+      prohibited this article from being saved:
+    </h4>
+      <% @customer.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    <% end %>
+<%= form_for @customer do |f| %>
+
+  <%= f.label :first_name %>
+  <%= f.text_field :first_name %>
+  <%= f.label :last_name %>
+  <%= f.text_field :last_name %>
+  <%= f.label :birthday %>
+  <%= f.date_field :birthday %>
+  <%= f.label :address %>
+  <%= f.text_field :address %>
+<!--  #should change to fill out address w/ street, city, state, zipcode, -->
+ <%=  f.select :gender, [['Female', 1], ['Male', 2], ['Non-Binary/Gender Non-Conforming', 3], ['Prefer Not to Say', 4]] %>
+  <%= f.submit  %>
+<% end %>

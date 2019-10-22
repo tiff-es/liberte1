@@ -1,0 +1,6 @@
+<!--# For our reference , not final?-->
+  <h1>We have <%= @customers.length %> customers</h2>
+    <% @customers.each do |customer| %>
+      <%= link_to customer.full_name, customer_path(customer) %>
+      <%#= customer.purchases.length %>
+<% end %>
