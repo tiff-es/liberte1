@@ -1,2 +1,9 @@
 
-<h1> "#{@review.customer}" </h1>
+<h1> Review </h1>
+
+<%= "#{@review.rating}" %>
+
+<%= "#{@review.content}" %>
+
+<button> <%= link_to "Back to Shop All", items_path %> </button>
+<button> <%= link_to "Back to Categories", categories_path %></button>

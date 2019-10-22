@@ -7,8 +7,7 @@ class Customer < ApplicationRecord
   has_many :purchases
   has_many :items, through: :purchases
 
-  has_many :reviews
-  has_many :items, through: :reviews
+  has_many :reviews, through: purchases
 
 
   def full_name

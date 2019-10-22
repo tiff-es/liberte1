@@ -1,0 +1,14 @@
+
+
+<%= form_for @item.reviews.build do |f| %>
+
+  <%= f.label :rating %> &nbsp;
+  <%= f.select :rating, 1..10 %> <br>
+
+  <br>
+
+  <%= f.label :content %> &nbsp;
+  <%= f.text_area :content %> <br>
+
+  <%= f.submit %>
+<% end %>
