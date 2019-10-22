@@ -28,7 +28,7 @@ class CustomersController < ApplicationController
   def update
     @customer = Customer.find(params[:id])
     @customer.update(customer_params)
-    if @customer.update(customer_params)
+    if @customer.update
     redirect_to customer_path(@customer)
     else
       render :edit
@@ -36,7 +36,9 @@ class CustomersController < ApplicationController
   end
 
   def destroy
-    Customer.destroy(params[:id])
+    @customer = Customer.find(params[:id])
+
+    @customer.destroy
     redirect_to items_path
   end
 
