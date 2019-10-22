@@ -1,0 +1,15 @@
+<html>
+  <body>
+    <h1> <%= @item.style %></h1>
+
+<!--      <img src="user/Desktop/IMG_2098.jpeg" alt="picture of a bag">-->
+
+      <ul>
+        <li> Size: <%= @item.size %> &nbsp; Color: <%= @item.color %> </li> <br>
+        <li> Price: <%= @item.price %></li>
+      </ul>
+  </body>
+  <button> <%= link_to "Categories", categories_path %></button>
+  <button> <%= link_to "Shop All", items_path %></button>
+</html>
+
