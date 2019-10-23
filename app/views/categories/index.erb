@@ -1,10 +1,46 @@
 
-<h1> Shop by Category </h1>
 
-<ul>
-  <% @categories.all.each do |category| %>
-  <li> <%= link_to "#{category.name.capitalize}", category_path(category) %> </li>
-  <% end %>
-</ul>
+<html lang = "en">
+<head>
+  <meta charset="UTF-8">
+  <title> Navigation Menu </title>
+  <link rel="stylesheet" href="style.css">
+</head>
 
-<button> <%= link_to "Shop All", items_path %> </button>
+<body>
+<div class="custom-padding">
+  <nav>
+    <div class="logo"> Liberté </div>
+    <ul class="menu-area">
+
+      <% @categories.all.each do |category| %>
+
+        <li> <%= link_to "#{category.name}", category_path(category) %> </li>
+
+      <% end %>
+    </ul>
+    <%= link_to "Shop All", items_path %>
+  </nav>
+</div>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+<!--<h1> Shop by Category </h1>-->
+
+<!--<ul>-->
+  <%# @categories.all.each do |category| %>
+<!--  <li> <%#= link_to "#{category.name.capitalize}", category_path(category) %> </li>-->
+  <%# end %>
+<!--</ul>-->
+
+<%# end %>

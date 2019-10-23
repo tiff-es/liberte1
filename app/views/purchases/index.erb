@@ -1,0 +1,10 @@
+
+<h1> All My Purchases </h1>
+
+<ul>
+
+  <% @purchases.each do |purchase| %>
+  <li> <%= link_to purchase.customer.full_name, purchase_path(purchase) %></li>
+  <% end %>
+
+</ul>

@@ -15,6 +15,7 @@ class ReviewsController < ApplicationController
 
   def create
     @review = Review.new(review_params)
+    byebug
     if @review.valid?
       @review.save
       redirect_to item_path(@item)
