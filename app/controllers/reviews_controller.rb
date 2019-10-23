@@ -17,7 +17,7 @@ class ReviewsController < ApplicationController
     @review = Review.new(review_params)
     if @review.valid?
       @review.save
-      redirect_to review_path(@review)
+      redirect_to item_path(@item)
     else
       render :new
     end

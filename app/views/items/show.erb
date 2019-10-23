@@ -8,6 +8,10 @@
         <li> Size: <%= @item.size %> &nbsp; Color: <%= @item.color %> </li> <br>
         <li> Price: <%= @item.price %></li>
       </ul>
+
+    <h3> Create a Review </h3>
+    <%= render "reviews/form" %>
+
   </body>
   <button> <%= link_to "Categories", categories_path %></button>
   <button> <%= link_to "Shop All", items_path %></button>
