@@ -1,7 +1,4 @@
 class ReviewsController < ApplicationController
-  # def index
-  #   @reviews = Review.all
-  # end
 
   def show
     @review = Review.find(params[:id])
@@ -14,13 +11,14 @@ class ReviewsController < ApplicationController
   end
 
   def create
-    @review = Review.new(review_params)
+    @review = Review.new(params[:review][:reviews])
     byebug
     if @review.valid?
       @review.save
+      @item = @review.item
       redirect_to item_path(@item)
     else
-      render :new
+      redirect_to item_path(@item)
     end
   end
 
@@ -30,9 +28,10 @@ class ReviewsController < ApplicationController
 
   def update
     @review = Review.find(params[:id])
+    @item = @review.item
     @review.update(review_params)
-    if @review.update
-     redirect_to review_path(@review)
+    if @review.update(review_params)
+     redirect_to item_path(@item)
     else
       render :edit
    end

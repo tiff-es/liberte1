@@ -1,6 +1,6 @@
 
-<%= form_for @review do |f| %>
-  <%= f.fields_for :reviews do |r| %>
+<%= form_for @item do |f| %>
+  <%=f.fields_for @review do |r| %>
   <%= r.label :rating %> &nbsp;
   <%= r.select :rating, 1..10 %> <br>
 

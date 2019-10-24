@@ -1,7 +1,7 @@
 class Review < ApplicationRecord
 
   belongs_to :item
-  belongs_to :customer
+  belongs_to :customer, optional: true
 
 
   validates :rating, presence: true

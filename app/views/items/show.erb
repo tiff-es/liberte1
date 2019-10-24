@@ -24,8 +24,11 @@
   <br>
       <ul>
         <% @item.reviews.each do |review| %>
-          <li> &nbsp; <%= review.rating %> &nbsp; | &nbsp; <%= review.content %></li> <br>
+          <li> &nbsp; <%= review.rating %> &nbsp; | &nbsp; <%= review.content %></li>
+          <button> <%= link_to "Edit Review", edit_review_path %></button>
+          <button> <%= link_to "Delete Review", item_path(@item), method: "delete" %> </button> <br>
           <% end %>
+
       </ul>
 
 </html>
