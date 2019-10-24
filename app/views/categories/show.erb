@@ -21,20 +21,21 @@
       <li class="nav-item category-item"><a href="/categories/2">Wallet</a></li>
       <li class="nav-item category-item"><a href="/categories/3">Sunglasses</a></li>
       <li class="nav-item category-item"><a href="/items">Shop All</a></li>
+        <li class="nav-item category-item"><a href="/customers">Customers</a></li>
       </ul>
     </div>
   </nav>
 </div>
 </header>
 
-<h1> <%= @category.name %> </h1>
+<!--<h1> <%#= @category.name %> </h1>-->
 
-<ul>
-<% @category.items.all.each do |item| %>
-    <li> <%= link_to "#{item.style.capitalize}", item_path(item) %> <br>
-      <%= "#{item.size.capitalize}" %> &nbsp; <%= "#{item.color.capitalize}" %> <br>
-      <%= "#{item.price}" %></li>
-<% end %>
-</ul>
+<!--<ul>-->
+<%# @category.items.all.each do |item| %>
+<!--    <li> <%#= link_to "#{item.style.capitalize}", item_path(item) %> <br>-->
+<!--      <%#= "#{item.size.capitalize}" %> &nbsp; <%#= "#{item.color.capitalize}" %> <br>-->
+<!--      <%#= "#{item.price}" %></li>-->
+<%# end %>
+<!--</ul>-->
 
-<button> <%= link_to "Shop All", items_path %> </button>
+<!--<button> <%#= link_to "Shop All", items_path %> </button>-->
