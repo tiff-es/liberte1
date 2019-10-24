@@ -15,9 +15,18 @@
     <%= render partial: 'reviews/new' %>
 
     <br>
-    <br>
   </body>
-  <button> <%= link_to "Categories", categories_path %></button>
+  <button> <%= link_to "Home", categories_path %></button>
   <button> <%= link_to "Shop All", items_path %></button>
+
+  <br> <br>
+  <h3> Reviews for This Bag</h3>
+  <br>
+      <ul>
+        <% @item.reviews.each do |review| %>
+          <li> &nbsp; <%= review.rating %> &nbsp; | &nbsp; <%= review.content %></li> <br>
+          <% end %>
+      </ul>
+
 </html>
 
