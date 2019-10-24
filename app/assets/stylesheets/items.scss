@@ -1,3 +1,17 @@
 // Place all the styles related to the items controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.item-image-container{
+  height: 400px;
+  width: 400px;
+  margin-right: 100px;
+}
+
+.card-body{
+  display: block;
+}
+
+.card-body > * {
+  display: inline-block;
+}

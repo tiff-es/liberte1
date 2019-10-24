@@ -31,7 +31,7 @@ class ReviewsController < ApplicationController
     @item = @review.item
     @review.update(review_params)
     if @review.update(review_params)
-     redirect_to item_path(@item)
+      redirect_to item_path(@item)
     else
       render :edit
    end
@@ -39,8 +39,11 @@ class ReviewsController < ApplicationController
 
 
   def destroy
+
     @review = Review.find(params[:id])
+    item = @review.item
   @review.destroy
+    redirect_to item_path(item)
   end
 
   private
