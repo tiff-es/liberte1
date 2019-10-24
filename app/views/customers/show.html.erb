@@ -4,9 +4,9 @@
 <% if @customer.purchase_list %>
   <% "You've purchased #{@customer.purchase_list.length} items" %>
 <% else%>
-<!--Shows users purchased item  count (can be  changed to be iterated thru for an index of items)-->
+  <!--Shows users purchased item  count (can be  changed to be iterated thru for an index of items)-->
   <button>  <h3><%=link_to 'Shop All!', items_path%></button></h2>
-  <% end %>
+<% end %>
 <!--     If the user hasn't bought any items, link to items_path or a store page-->
 <!--Shows users purchased item  count (can be  changed to be iterated thru for an index of items)-->
 
