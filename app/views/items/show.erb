@@ -5,7 +5,7 @@
 
     <div class="card">
       <div class="card-body">
-        <img class="item-image-container" src="/assets/bags/BucketBag01" />
+        <img class="item-image-container" src="<%= "#{@item.image_path}"%> " />
         <div class="item-info">
           Size: <%= @item.size %> &nbsp; Color: <%= @item.color %>  <br>
           Price: <%= @item.price %>

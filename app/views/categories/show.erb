@@ -13,7 +13,7 @@
 
       <% @category.items.all.each do |item| %>
         <li>
-          <img class="item-image-container" src="/assets/bags/BoxBagBlack01.jpeg" /> <br>
+          <img class="item-image-container" src=<%= "#{item.image_path}"%> /> <br>
           <%= link_to "#{item.style.capitalize}", item_path(item) %> <br>
           <%= "#{item.size.capitalize}" %> &nbsp; <%= "#{item.color.capitalize}" %> <br>
           <%= "#{item.price}" %></li> <br>
