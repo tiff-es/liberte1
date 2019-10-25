@@ -1,13 +1,24 @@
 
 
-<h1> Shop All </h1>
+<body>
 
-<ul>
-  <% @items.all.each do |item| %>
+<div class="card">
+  <div class="card-body">
+    <div class="item-info">
+      <ul class="list" style="list-style: none;">
 
-    <li> <%= link_to "#{item.style.capitalize}", item_path(item) %> <br>
-      Size: <%= "#{item.size.capitalize}" %> &nbsp; Color: <%= "#{item.color.capitalize}" %> <br>
-      Price: <%= "#{item.price}" %> </li>
-  <% end %>
+        <% @items.all.each do |item| %>
+          <li>
+            <img class="item-image-container" src="/assets/bags/BoxBagBlack01.jpeg" /> <br>
+            <%= link_to "#{item.style.capitalize}", item_path(item) %> <br>
+            <%= "#{item.size.capitalize}" %> &nbsp; <%= "#{item.color.capitalize}" %> <br>
+            <%= "#{item.price}" %></li> <br>
+        <% end %>
 
-</ul>
+      </ul>
+    </div>
+  </div>
+</div>
+<!--<button> <%#= link_to "Shop All", items_path %> </button>-->
+</body>
+
