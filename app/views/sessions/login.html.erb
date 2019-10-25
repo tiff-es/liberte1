@@ -1,22 +1,29 @@
 
-<br>
-<br>
 
-<h2 align="center"> Login </h2>
+<body class="login-page">
 
-<body align="center">
 
-<% if notice %>
-  <div> <%= notice %> </div>
-<% end %>
+  <% if notice %>
+    <div> <%= notice %> </div>
+  <% end %>
 
-<div align="center">
-  <img class="login--image-container" src="/assests/bags/loginpage.jpg" style="width: 100%" />
-    <%= form_tag "/login" do %>
-      <%= label :username, "username: " %>
-      <%= text_field_tag :username %>
-      <%= submit_tag "Login" %>
-    <% end %>
-</div>
+
+
+  <div align="center" style="z-index: 1">
+    <img src="/assets/bags/LoginPage.jpg" style=" z-index: 0">
+      <div class="login-container">
+        <h2 align="center"> Login </h2>
+        <%= form_tag "/login" do %>
+          <%= label :username, "username: " %>
+          <%= text_field_tag :username %> <br>
+          <%= label :password, "password: " %>
+          <%= password_field_tag :password %> <br>
+          <%= submit_tag "Login" %>
+        <% end %>
+      </div>
+
+
+  </div>
+
 
 </body>

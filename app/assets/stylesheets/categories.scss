@@ -18,6 +18,7 @@
 .image-container {
   display: flex;
   justify-content: center;
+  background-color: white;
 }
 
 .image-logo {
@@ -28,5 +29,12 @@
 
 ul.list {
   column-count: 3;
+}
+
+#login-text {
+  position: absolute;
+  left: 97%;
+  top: 10%;
+  color: black
 }
 
