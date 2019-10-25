@@ -6,13 +6,12 @@
 
 <body align="center">
 
-<img class="login-background-image" src="/assests/bags/loginpage.jpg" style="width: 100%" />
-
 <% if notice %>
   <div> <%= notice %> </div>
 <% end %>
 
 <div align="center">
+  <img class="login--image-container" src="/assests/bags/loginpage.jpg" style="width: 100%" />
     <%= form_tag "/login" do %>
       <%= label :username, "username: " %>
       <%= text_field_tag :username %>
