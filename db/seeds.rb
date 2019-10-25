@@ -15,22 +15,22 @@ Category.destroy_all
 #Customer
 
 c1 = Customer.create_or_find_by(first_name: 'Tim', last_name: 'Roberts', birthday: 'November 1, 1999',
-                                address: '1234 Bob St, Washington D.C. 10004', gender: 'Male')
+                                address: '1234 Bob St, Washington D.C. 10004', gender: 'Male', username: "timRobs99")
 
 c2 = Customer.create_or_find_by(first_name: 'Christina', last_name: 'Park', birthday: 'January 17, 1990',
-                                address: '7414 Colshire Dr. , McLean VA 22102', gender: 'Female')
+                                address: '7414 Colshire Dr. , McLean VA 22102', gender: 'Female', username: "cmp0117")
 
 c3 = Customer.create_or_find_by(first_name: 'Janice', last_name: 'Kim', birthday: 'October 25, 1996',
-                                address: '1001 Strawberry Ave, Fairfax VA 22031', gender: 'Female')
+                                address: '1001 Strawberry Ave, Fairfax VA 22031', gender: 'Female', username: "JanKim96")
 
 c4 = Customer.create_or_find_by(first_name: 'Ezra', last_name: 'Ruby', birthday: 'October 05, 1987',
-                                address: '5005 Happy Ave, Arlington VA 22207', gender: 'Prefer not to say')
+                                address: '5005 Happy Ave, Arlington VA 22207', gender: 'Prefer not to say', username: "EzRuby87")
 
 c5 = Customer.create_or_find_by(first_name: 'Fred', last_name: 'Ted', birthday: 'June 03, 1968',
-                                address: '5005 Oldtown Dr, Alexandria VA 22304', gender: 'Male')
+                                address: '5005 Oldtown Dr, Alexandria VA 22304', gender: 'Male', username: "eded063")
 
 c6 = Customer.create_or_find_by(first_name: 'Ann', last_name: 'Flower', birthday: 'May 22, 1980',
-                                address: '0404 Not Found Dr, Errorville TN 73451', gender: 'Female')
+                                address: '0404 Not Found Dr, Errorville TN 73451', gender: 'Female', username: "FlAnn80")
 #
 #Category
 
