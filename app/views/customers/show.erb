@@ -18,6 +18,17 @@
 <h2>Full name: <%= @customer.full_name %></h2>
 <h2> Username: <%= @customer.username %></h2>
 <h2>Address: <%= @customer.address %></h2>
-<h2>Birthday: <%= @customer.birthday %> </h2>
+<h2>Birthday: <%= @customer.birthday %> </h2><br><br>
+<h2>Your purchases:</h2>
+<ul><% @customer.purchase_list.each do |item| %>
+ <h4><li> <%=link_to "#{item.size.capitalize} #{item.color.capitalize} #{item.style.capitalize}($#{item.price})", item_path(item) %> </li></h4>
+<% end %></
+
+</ul><br>
 
 <h4> <button><%= link_to 'Edit Your Account', edit_customer_path(@customer) %> </h4> </button>
+<!--create_table "items", force: :cascade do |t|-->
+<!--t.float "price"-->
+<!--t.string "style"-->
+<!--t.string "size"-->
+<!--t.string "color"-->
