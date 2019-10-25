@@ -81,6 +81,7 @@ sg5 = Item.create_or_find_by(price: 120.00, style: 'round', size: 'large', color
 sg6 = Item.create_or_find_by(price: 110.00, style: 'round', size: 'medium', color: 'black', category_id: sunglasses.id, inventory: 30)
 sg7 = Item.create_or_find_by(price: 120.00, style: 'round', size: 'large', color: 'brown', category_id: sunglasses.id, inventory: 30)
 sg8 = Item.create_or_find_by(price: 110.00, style: 'round', size: 'medium', color: 'brown', category_id: sunglasses.id, inventory: 30)
+sg9 = Item.create_or_find_by(price: 120.00, style: 'round', size: 'medium', color: 'brown', category_id: sunglasses.id, inventory: 30)
 
 # reviews
 
