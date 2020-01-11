@@ -9,17 +9,19 @@ class CustomersController < ApplicationController
 
   def new
     @customer = Customer.new
+
   end
 
   def create
-    @customer = Customer.new(customer_params)
-    if @customer.valid?
-      @customer.save
-      redirect_to customer_path(@customer)
+    user = Customer.find_by(username: params[:username])
+    if user
+      session[:user_id] = user.id
+      redirect_to categories_path
     else
-      render :new
-      end
-  end
+      flash.now["notice"] = "No user found with this username."
+      render 'sessions/login'
+    end
+    end
 
   def edit
     @customer = Customer.find(params[:id])

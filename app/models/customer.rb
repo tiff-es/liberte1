@@ -3,6 +3,7 @@ class Customer < ApplicationRecord
   validates :last_name, presence: true, length: {minimum: 1}
   validates :address, presence: true, uniqueness: {message: "Address already in database, please try again"}
   validates :birthday, presence: true
+  validates :username, presence: true, uniqueness: {message: 'Username taken, please try again'}
 
   has_many :purchases
   has_many :items, through: :purchases

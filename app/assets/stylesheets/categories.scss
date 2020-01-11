@@ -4,8 +4,11 @@
 
 .navigation-list {
   margin: 0 auto;
-}
 
+  * {
+    font-family: 'Dancing Script', cursive;
+  }
+}
 .category-item {
   font-size: 24px;
   margin-right: 60px;
@@ -29,6 +32,7 @@
 
 ul.list {
   column-count: 3;
+
 }
 
 #login-text {
@@ -36,5 +40,6 @@ ul.list {
   left: 97%;
   top: 10%;
   color: black
+
 }
 

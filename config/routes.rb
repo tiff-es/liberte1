@@ -5,7 +5,8 @@ Rails.application.routes.draw do
   resources :customers
   resources :reviews
   resources :purchases, only: [:index, :show]
-
+get '/', to: 'categories#index'
+  # get '/welcome', to: 'sessions#welcome'
   get "/login", to: 'sessions#login'
   post "/login", to: "sessions#process_login"
 
