@@ -5,7 +5,7 @@
 #### Created by [Christina](https://github.com/christinapark0117) and [Tiffany Abraham](https://github.com/boostinwrx)
 
 ---- 
-#### This is a Flatiron School module 2 partner project using exclusively rails.
+#### This is a Flatiron School module 2 partner project using exclusively Ruby on Rails for the client-side and server-side.
 
 #### About:
 * Liberte is a fashion store partner project made using Rails
