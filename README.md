@@ -13,3 +13,7 @@
 * Users can leave product reviews for each product as well as edit them
 
  ###### Login is not functional at the moment, this is a proof of concept
+
+----
+
+### This application is currently under development. It's in the process of being polished, and adding features.
