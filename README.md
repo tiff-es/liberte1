@@ -7,8 +7,9 @@
 ---- 
 #### This is a Flatiron School module 2 partner project using exclusively rails.
 
-####About:
+#### About:
 * Liberte is a fashion store partner project made using Rails
 * Users can view various product categories with a variety of items
-* ###### Login is not functional at the moment, this is a proof of concept
 * Users can leave product reviews for each product as well as edit them
+
+ ###### Login is not functional at the moment, this is a proof of concept
